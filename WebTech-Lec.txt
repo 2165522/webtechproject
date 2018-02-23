@@ -1,0 +1,220 @@
+WWW - World Wide Web
+	- collection of web resources & applications: applications that can make us access web resources by the use of the internet.
+1989 - sir Tim Berners Lee
+	 - He Works at CERN - HTTP, HTML, URL - provides the addressing of resources
+	 - created Web just to be able to share the researchers of the other scientist.
+WAIS - Wide Area Information Server 
+	 - Collection of server
+GOPHER
+Types of Applications
+	- Client / Server
+		- They host web resources
+		- wait for client to give request resources
+	Spiders - app that crawl the web
+	Internet - Global network of networks
+
+Hypertext Transfer Protocol (HTTP)
+	- Application layer communications protocol used to access resources on the WWW
+	- invented bt Tim Berners - Lee of CERN in 1989
+	- jointly developed by the W3C & the IETF (Internet Engineering Task Force)
+Version History
+	- HTTP 0.9 (1991)
+	- HTTP 1.0 (RFC 1945, May 1996)
+	- HTTP 1.1 (RFC 2068 Jan 1997, RFC 2616 Jun 1999), (RFC 7230-7235(Jun 2014)
+	- HTTP 2 (RFC 7540 May 2015)
+HTTP Fundamentals
+	- HTTP is based on a client server achitecture
+		servers
+			origin servers
+			proxy servers, gateway, tunnels
+	-clients, a.k.a user agents (UA):
+		web browser, web crawlers/spiders, other end user tools & applications.
+	- HTTP uses a request response standard protocol
+		- the client sends an HTTP request message to the server.
+		- the server processes the request & replies with an HTTP response message.
+
+HTTP is stateless communications protocol
+	servers do not keep information about clients in between request.
+HTTP resources are identified using URLs, or more specially, HTTP URLs
+	- scheme (HTTP/HTTPS)
+	- authority
+		- user information/authentication credentials(deprecated)
+		- host
+	- Domain name(resolved to an IPAddress using DNS) of the server where the resource resides will be created
+		- port number
+	- Path to resource (resolved relative to the document root on the server)
+	- May refer to a static/dynamic resource
+	- Typically  provided as key = value pairs, with ampersand(&) separators between key value pairs
+		may be URL - Encoded
+	- Fragment identifier
+HTTP Request Message
+	- Request Line (CRLF - terminated line consisting of three spaces separated values)
+		- Method
+		- Request
+		- Protocol Version
+
+		
+GET 
+HEAD - similar to GET but doesn't send message body
+	- returns onlu the status line & message headers returned by a GET request, without the message body
+POST - Typically used in submitting HTML Form Data
+PUT - Create or replace the state of target request.
+DELETE - remove the association between the target resource 
+OPTIONS - request information about the communication options available for the target resources.
+TRACE - requests a remote, application level loop back of the request message.
+	- Typically used for testing/diagnostics of the request/response.
+CONNECT - request the establishment of a tunnel.
+
+METHOD PROPERTIES GET, HEAD, OPTIONS, TRACE
+	- Safe Methods - client does not request & does not expect, any state change on the origin server as a result of applying the method to a target resource.
+	- Idempotent Method - intended effect on the server if multiple identical request with the method is the sane as the effect of a single such request
+		- GET, HEAD, OPTIONS, TRACE, PUT, DELET
+	- Cachable Methods - no message because it is already cached.
+		- indicates that the response to a method is allowed to be stired for future use.
+		
+		
+HTTP STATUS CODES
+Informational (1xx) - inform the client about the status
+	100 continue 
+	101 Switching Protocols
+Success (2xx)
+	200 OK 					204 No Content
+	201 Created				205 Reset Content
+	202 Accepted			206 Partial Content
+	203 Non - Authoritative information
+Redirection (3xx)
+	300 Multiple Choices	304 Not Modified
+	301 Moved Permanently 	305 Use Proxy
+	302 Found				306 (unused)
+	303 See Other 			307 Temporary Redirection
+Client Error (4xx)
+	400	Bad Request 		411 ______ required 
+	401 Unauthorized 		412 Precondition Failed
+	402 Payment Required 
+	403 Forbidden 
+	404	Not Found
+	405 Method Not Allowed
+	406 Not Acceptable 
+	407 Proxy Authentication
+	408 Request Timeout 
+	409 Conflict
+	410 Gone
+	
+	
+Server Error (5xx)
+	500 Internal Server Error	503 Service Unavailable 
+	501 Not Implemented			504 Gateway Timeout
+	502 Bad Gateway				505 HTTP Version not supported
+HTTP Request Message
+Message Headers
+	General	- it is applicable to the whole
+	request 
+	entity
+HTTP Response Message
+Message Headers
+	General
+	Response
+	Entity
+General Header Fields
+-Cache-Control		-Trailer
+-connection			-Transfer
+-Date				-Via
+-Pragma				-Upgrade
+Request Header Fields
+- Accept 			- From 				- If-unmodified-since
+- Accept-Charset	- Host				- Max-Forwards
+- Accept-Encoding   - If-match 			- Proxy-Authorization
+- Accept-Language	- If-modified-since - Range
+- Authorization		- If-none-match		- Refever
+- Expect			- If-range		 	- TE
+- User Agent
+
+
+Response Header Fields
+- Accept-Range
+- Age 				- Retry-After		- WWW-Authenticate
+- ETag				- Server			- Proxy-Authenticate
+- Location			- Vary
+Entity Header Fields
+- Allow 			- Content-MD5
+- Content-Encoding	- Content-range
+- Content-language  - Content-Types
+- Content-lenght 	- Expires
+- Content-location 	- Last-modified-since
+HTTP Extensions
+	- HTTP can be extended by defining new request methods, message headers, and/or status codes, and then implementing sewers and/or clients that make use of the new functionality.
+		-e.g WebDAV (RFC 4918)
+			Request Methods =  PROPFIND, PROPPATCH, MKCOL, COPY, TOKEN.
+	Overwrite Timeout
+		- Status CODES
+			(207) Multi-Status, (422) Unprocessable Entity, (423) locked, (424)
+
+Hypertext Markup Language (HTML)
+	- Language used to work up documents (i.e web pages) in the world wide web
+	- application of SGML
+	historically, HTML was used to specify the structure & content of the web pages as well as their presentation
+	- initially developed at CERN, then the IETF, then the W3C & then also the WHATWG
+	version History
+		- pre standardlization
+			-HTML tags, by Tim Berners - Lee, Late 1991
+			- Hypertext Markup Language Internet Draft, by Tim Berners-Lee & Dan Connoly, published by the IETF in mid - 1993
+			HTML (Hypertext Markup Format) Internet Draft by Dave Raggett, late 1993
+			Standards:
+				HTML 2.0 (RFC 1866, Nov 1995)
+				supplemental RFCs:
+					Form-based File Upload (RFC 1867, Nov )
+					HTML tables (RFC 1942, May 1996)
+					Client-Side Image Maops (RFC 1980, Aug 1996)
+					Internationalization of HTML (RFC 2070, Jan 1997)
+				HTML 3.2 (W3C Recommendation, Jan 1997 )
+				HTML 4.0 (				Dec 1997)
+				HTML 4.01 (				Dec 1999)
+					introduced deprecation of presentational elements & attributes in favor of styke sheets
+					-strict, transitional, frameset DTDs
+		XHTML
+			- reformulation of HTML in XML
+			- intended to facilitate the introduction of new HTML elements and/or attributes, provide interopeability between HTML & XML based system and leverage the use of XML tools in creating, editing, & parsing HTML
+			- sought to move the internet - content dev't community from the dats of malformed, non-standard
+			-XHTML 1.0 (W3C recommendation, Jab 2000)
+			-HTML 1.1 Module-based XHTML (W3C Recommendation, May 2001)
+		HTML 5 
+			- arose from the effort to evolve HTML (instead of replacing it) to address backward compatibility issues that hindered the adaption of XHTML, as well as to address the emerging needs of modern web applications
+			- work on HTML5 was initially undertaken by the WHATWG in 2004, with the W3C signifying interest to participate in the effort in 2006; the first draft of HTML5 was published in 2008 (edited by Ian
+			- HTML5 incorporated specifications from HTML existing APIs & introduced new APIs as well
+		HTML5 (W3C Recommendation, Oct 2014)
+		HTML5.1 (W3C Recommendation, Nov 2016)
+		HTML5.2 (W3C Recommendation, Dec 2017)
+		HTML Living Standards (WHATWG)
+	HTML document structure 
+		- version information	 
+		- root element (HTML)
+		- declarative header section containing document metadata delimited by the head element 
+		
+		DOM-Document Object Model -provide hierarchical structure
+		
+		document body containing the document's actual content delimited bu either the body element or the frameset element (obsolute in HTML5)
+	HTML Document Components
+		- Document Type Declaration (DOCTYPE)
+		
+		- Tags 
+		- Content 
+			- Content Models
+			- Void elements
+		- Attributes & Attribute Values (HTML 4.01, XHTML 1.0)
+			- Global Attributes
+			- Custom Non- Visible Data Attributes
+			-WAI - ARIA Attributes
+Element-specific attributes
+MATHML, SVG
+	- standard on how you will specify mathematical operation
+	- Mathematical markup language
+SVG - Scalable Vector Graphics
+	- curves
+Character References
+Comments - this will not be rendered on a page.
+	
+		
+
+
+
+	
