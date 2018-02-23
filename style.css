@@ -1,0 +1,81 @@
+body{
+    margin:0;
+    margin-top: -21px;
+}
+
+header {
+    background-color: #52658F;
+    height: 400px;
+}
+
+.cont1{
+    margin: 0;
+    height: 500px;
+    background-color: #F7F5e6;
+}
+
+/*NAV*/
+ul {
+    position: sticky;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0,51,0,0.8);
+    font-family: Typo Grotesk Thin Demo;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    font-size: 20px;
+    font-size: calc(12px + 0.7vw);
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+/*TXT*/
+
+h1{
+    display: block;
+    font-family: Grotesk;
+    font-size: 45px;
+    font-weight: 100;
+    color: white;
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.h11{
+    font-family: Grotesk thin;
+}
+
+h2{
+    display: block;
+    font-family: Grotesk Thin;
+    color: white;
+}
+
+@font-face {
+    font-family: Grotesk;
+    src: url("fonts/TYPO GROTESK DEMO.OTF");
+}
+
+@font-face {
+    font-family: Grotesk Thin;
+    src: url("fonts/TYPO GROTESK THIN DEMO.OTF");
+}
+
