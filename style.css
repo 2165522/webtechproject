@@ -1,6 +1,7 @@
 body{
     margin:0;
     margin-top: -21px;
+	height: 100%;
 }
 
 header {
@@ -12,10 +13,11 @@ header {
     margin: 0;
     height: 500px;
     background-color: #F7F5e6;
+	width: 90%;
 }
 
 /*NAV*/
-ul {
+.main ul {
     position: sticky;
     list-style-type: none;
     margin: 0;
@@ -41,6 +43,28 @@ li a {
 
 li a:hover {
     background-color: #111;
+}
+
+
+.vertical-menu ul {
+	width: 10%; /* Set a width if you like */
+	height: 100%;
+	position: sticky;
+	float: right;
+    background-color: rgba(0,51,0,0.8); /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.vertical-menu ul:hover {
+    background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.vertical-menu ul.active {
+    background-color: #4CAF50; /* Add a green color to the "active/current" link */
+    color: white;
 }
 
 /*TXT*/
