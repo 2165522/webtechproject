@@ -11,22 +11,22 @@ header {
 
 .cont1{
     margin: 0;
-    height: 500px;
+    height: 50%;
     background-color: #F7F5e6;
 	width: 90%;
 }
 
 .cont2{
     margin: 0;
-    height: 500px;
+    height: 50%;
     background-color: #E0FFFF;
 	width: 90%;
 }
 
 .cont3{
     margin: 0;
-    height: 500px;
-    background-color: #66CDAA;
+    height: 50%;
+    background-color: #E6E6FA;
 	width: 90%;
 }
 
