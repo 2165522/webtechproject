@@ -16,6 +16,20 @@ header {
 	width: 90%;
 }
 
+.cont2{
+    margin: 0;
+    height: 500px;
+    background-color: #E0FFFF;
+	width: 90%;
+}
+
+.cont3{
+    margin: 0;
+    height: 500px;
+    background-color: #66CDAA;
+	width: 90%;
+}
+
 /*NAV*/
 .main ul {
     position: sticky;
