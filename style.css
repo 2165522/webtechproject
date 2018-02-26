@@ -1,6 +1,5 @@
 body{
     margin:0;
-    margin-top: -21px;
 	height: 100%;
 }
 
@@ -9,48 +8,52 @@ header {
     height: 400px;
 }
 
+.main_cont{
+    float: right;
+	width: 85%;
+    margin: 0;
+}
+
 .cont1{
     margin: 0;
-    height: 50%;
     background-color: #F7F5e6;
-	width: 90%;
 }
 
 .cont2{
     margin: 0;
-    height: 50%;
     background-color: #E0FFFF;
-	width: 90%;
 }
 
 .cont3{
     margin: 0;
-    height: 50%;
     background-color: #E6E6FA;
-	width: 90%;
 }
 
 /*NAV*/
+nav{
+    margin: 0;
+}
+
 .main ul {
     position: sticky;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgba(0,51,0,0.8);
+    background-color: #333A56;
     font-family: Typo Grotesk Thin Demo;
 }
 
 li {
     float: left;
+    list-style-type: none;
 }
 
 li a {
-    font-size: 20px;
+    font-size: 15px;
     font-size: calc(12px + 0.7vw);
     display: block;
     color: white;
-    text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
@@ -61,14 +64,12 @@ li a:hover {
 
 
 .vertical-menu ul {
-	width: 10%; /* Set a width if you like */
+	width: 15%; /* Set a width if you like */
 	height: 100%;
 	position: sticky;
-	float: right;
-    background-color: rgba(0,51,0,0.8); /* Grey background color */
-    color: black; /* Black text color */
-    display: block; /* Make the links appear below each other */
-    padding: 12px; /* Add some padding */
+	float: left;
+    background-color: #333A56; /* Grey background color */
+    color: #E8E8E8; /* Add some padding */
     text-decoration: none; /* Remove underline from links */
 }
 
