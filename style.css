@@ -194,3 +194,19 @@ h1{
     src: url("fonts/ABEAKRG.TTF");
 }
 
+/*TABLE*/
+table{
+    table-layout: fixed;
+    width: 200px;
+}
+
+th, td {
+    width: 110px;
+}
+      tr:nth-of-type(odd) {
+      background-color:#ccc;
+    }
+tr:nth-of-type(even) {
+      background-color:gray;
+    }
+
