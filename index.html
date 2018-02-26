@@ -4,261 +4,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>WebTech2018</title>
+    <style>
+        body{
+            margin:0;
+            padding: 0;
+            height: 100%;
+            background-image: url(img/cover.jpg);
+            background-size: cover;
+        }
+
+        .header { 
+            position: absolute; 
+            visibility: visible; 
+            transform: translate(60%, 220%);
+        } 
+
+
+        /*NAV*/
+
+        .horizontal ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333A56;
+            font-family: Grotesk Thin;
+            bottom: 0;
+            position: fixed;
+            width: 100%;
+        }
+
+        .horizontal ul li {
+            float: left;
+            list-style-type: none;
+        }
+
+        .horizontal li a {
+            font-size: 15px;
+            font-size: calc(12px + 0.7vw);
+            display: block;
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .horizontal li a:hover {
+            background-color: #111;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        /*TXT*/
+
+         .header h1{
+            display: block;
+            font-family: Grotesk;
+             font-size: 60px;
+            font-weight: 100;
+            color: white;
+            position: relative;
+            float: left;
+        }
+         .h11{
+            font-family: Grotesk thin;
+            font-size: 55px;
+        }
+
+        @font-face {
+            font-family: Grotesk;
+            src: url("fonts/TYPO GROTESK DEMO.OTF");
+        }
+
+        @font-face {
+            font-family: Grotesk Thin;
+            src: url("fonts/TYPO GROTESK THIN DEMO.OTF");
+        }
+    </style>
 </head>
 
 <body>
-    <header>
+    <div class="header">
         <h1>Web Systems and Technologies<br>
             <span class="h11">AY: 2017-2018 Second Semester</span></h1>
-    </header>
-    <nav class="main">
+    </div>
+    
+    <nav class="horizontal">
         <ul>
-            <li><a href="#1">Prelims</a></li>
+            <li><a href="links/prelim.html">Prelims</a></li>
             <li><a href="#2">Midterms</a></li>
             <li><a href="#3">Finals</a></li>
         </ul>
     </nav>
-    <nav class="vertical-menu">
-        <ul>
-            <li><a href="#1">World Wide Web</a></li>
-            <li><a href="#3">Types of Applications</a></li>
-            <li><a href="#2">Hypertext Transfer Protocol(HTTP)</a></li>
-            <li><a href="#2">HTTP Fundamentals</a></li>
-            <li><a href="#2">HTTP Request Message</a></li>
-            <li><a href="#2">Topic4</a></li>
-            <li><a href="#2">Topic5</a></li>
-            <li><a href="#2">Topic6</a></li>
-            <li><a href="#2">Topic7</a></li>
-        </ul>
-    </nav>
-    <div class="main_cont">
-        <div class="cont1">
-            <dl>
-                <dt><h3>World Wide Web</h3></dt>
-                <dd>-Collection of web resources & applications: applications that can make us access web resources by the use of the internet.</dd>
-                <dt><h3>1989 - sir Tim Berners Lee</h3></dt>
-                <dd>- He Works at CERN - HTTP, HTML, URL - provides the addressing of resources</dd>
-                <dd>- Created Web just to be able to share the researchers of the other scientist.</dd>
-                <dt><h3><abbr title="Wide Area Information Server">WAIS</abbr></h3></dt>
-                <dd> - Collection of server</dd>
-            </dl>
-        </div>
-
-        <div class="cont2">
-            <dl>
-                <dt><h3>Types of Applications</h3></dt>
-                <dt><strong>Client or Server</strong></dt>
-                    <dd>-They host web resources</dd>
-                    <dd>-Wait for client to give request resources</dd>
-                <dt><strong>Spiders</strong></dt>
-                    <dd>-Applications that crawl the Web</dd>
-                <dt><strong>Internet</strong></dt>
-                    <dd>-Global network of networks</dd>
-            </dl>				
-        </div>
-
-
-        <div class="cont3">
-            <dl>
-                <dt><strong><abbr title="Hypertext Transfer Protocol">HTTP</abbr></strong></dt>
-                    <dd>-Application layer communications protocol used to access resources on the WWW</dd>
-                    <dd>- Invented bt Tim Berners - Lee of CERN in 1989</dd>
-                    <dd>- Jointly developed by the W3C & the IETF (Internet Engineering Task Force)</dd>
-                <dt><strong>Version History</strong></dt>
-                    <dd>-HTTP 0.9(1991)</dd>
-                    <dd>-HTTP 1.0 (RFC 1945, May 1996)</dd>
-                    <dd>-HTTP 1.1 (RFC 2068 Jan 1997, RFC 2616 Jun 1999), (RFC 7230-7235(Jun 2014)</dd>
-                    <dd>-HTTP 2 (RFC 7540 May 2015)</dd><br>
-
-                <dt><h3>HTTP Fundamentals</h3></dt>
-                <dt>HTTP typically runs on top of TCP/IP, using TCP port 80 by default, or TCP port 443 for HTTPS (HTTP over SSL/TLS)</dt>
-                <dd>Servers - Origin Servers, Proxy Servers, Gateways, and Tunnels.</dd>
-                 <dt><strong>HTTP</strong></dt>	
-                    <dd>-Uses a request response standard protocol</dd>
-                    <dd>-The client sends an HTTP request message to the server</dd>
-                    <dd>-The server processes the request & replies with an HTTP response message</dd>
-                <dt><strong>Clients</strong></dt> 
-                    <dd>web browser, web crawlers/spiders, other end user tools & applications</dd>
-                <dt><strong>Servers</strong></dt>
-                    <dd>-HTTP is based on a client server architecture</dd>
-                    <dd>-Origin Servers</dd>
-                    <dd>-Proxy servers, gateway, tunnels</dd>
-                <dt><strong>HTTP is stateless communications protocol</strong></dt>
-                    <dd>-Servers do not keep information about clients in between requests.</dd>
-                <dt><strong>HTTP resources are identified using URLs, or more specially, HTTP URLs</strong></dt>
-                    <dd>-Scheme (HTTP/HTTPs)</dd>
-                    <dt><strong>Authority</strong></dt>
-                        <dd>-User information authentication credentials(deprecated)</dd>
-                        <dd>Host - domain name (resolved to an IP Address using DNS) of the server where the resource resides/will be created.</dd>
-                        <dd>Port Number</dd>
-                <dt><strong>Path to resource (resolved relative to the document root on the server)</strong></dt>
-                <dd>May refer to a static/dynamic resource</dd>
-                <dt><strong>Query in HTTP</strong></dt>
-                <dd>Typically provided as key = value pairs,with ampersand(&) separators between key value pairs; may be URL - Encoded</dd>
-                <dt><strong>Fragment identifier</strong></dt>
-                <dt><h3>HTTP Request Message</h3></dt>
-                    <dt><strong>Request Line - </strong>(CRLF - terminated line consisting of three spaces separated values)</dt>
-                        <dd>-Method</dd>
-                        <dd>-Request</dd>
-                        <dd>-Protocol Version</dd>
-                <dt><h3>HTTP Request Methods</h3></dt>
-                    <dt><strong>GET</strong></dt>
-                        <dd>it is used to transfer a selected presentation of the target resource. The retrieved resource is returned in  the message body of the response as entiy. Most commonly used HTTP method that is used to request from the server the retrieval of the source identified by the request URI; the retrieved resource is returned in the message body as an entity. Can be combined with conditional and/or range request headers to effect conditional and/or partial resource retrieval Must be supported by all general-purpose servers.</dd>
-                    <dt><strong>HEAD</strong>
-                        <dd>returns only the status line and message headers returned by a GET request, without the message body.</dd>
-                    <dt><strong>POST </strong> 
-                        <dd>typically used in submitting HTML Form Data.</dd>
-                    <dt><strong>PUT </strong> 
-                        <dd>create or replace the state of target request.</dd>
-                <dt><strong>DELETE</strong></dt> 
-                        <dd>used to delete/remove a resource indentified by the Uniform Resource Identifier(URI)</dd>
-                    <dt><strong>OPTIONS </strong>
-                        <dd> used to request information about the communication options available for the target resources</dd>
-                    <dt><strong>TRACE </strong>
-                        <dd>requests a remote, application-level loopback of the request message</dd>
-                        <dd>typically  used for testing/diagnostics of the request/response.</dd>
-                    <dt><strong>CONNECT </strong> 
-                        <dd>requests the establishment of a tunnel; reserved for the use of tunneling proxy servers.</dd>
-                <dt><h3>Method Properties</h3></dt>
-                    <dt><strong>Safe Methods</strong></dt>
-                        <dd>GET, HEAD, OPTIONS, TRACE</dd>
-                        <dd>client does not request and does not expect, any state change on the origin server as a result of applying the method to a target resource.</dd>
-                    <dt><strong>Idempotent Method</strong></dt>
-                        <dd>GET, HEAD, OPTIONS, TRACE, PUT, DELETE</dd>
-                        <dd>intended effect on the server of multiple identical requests with the method is the sameas the effect of a single request.</dd>
-                    <dt><strong>Cacheable Methods</strong></dt>
-                    <dd>GET, HEAD, POST</dd>
-                    <dd>no message because it is laready cached</dd>
-                    <dd>indicates that the response to a method is allowed to be stored for future use.</dd>
-                <dt><h3>HTTP Status Codes</h3></dt>
-            </dl>
-			
-			
-			
-			<table>
-			 <head>Informational(1xx)</head>
-			  <tr>
-				<th>100</th>
-				<td>Continue</td>
-				<th>101</th>
-				<td>Switching Protocols</td>
-			  </tr>
-			</table>
-			
-			<table>
-			 <head>Success(2xx)</head>
-			  <tr>
-				<th>200</th>
-				<td>OK</td>
-				<th>201</th>
-				<td>Created</td>
-				<th>202</th>
-				<td>Accepted</td>
-			  </tr>
-			  <tr>
-				<th>203</th>
-				<td>Non-Authoritative information</td>
-				<th>204</th>
-				<td>No Content</td>
-				<th>205</th>
-				<td>Reset Content</td>
-			  </tr>
-			  <tr>
-				<th>206</th>
-				<td>Partial Content</td>
-			  </tr>
-			</table>
-			
-			<table>
-			<head>Redirection(3xx)</head>
-			  <tr>
-				<th>300</th>
-				<td>Multiple Choices</td>
-				<th>301</th>
-				<td>Moved Permanently</td>
-				<th>302</th>
-				<td>Found</td>
-			  </tr>
-			  <tr>
-				<th>303</th>
-				<td>See Other</td>
-				<th>304</th>
-				<td>Not Modified</td>
-				<th>305</th>
-				<td>Use Proxy</td>
-			  </tr>
-			  <tr>
-				<th>306</th>
-				<td>Unused</td>
-				<th>307</th>
-				<td>Temporary Redirection</td>
-			  </tr>
-			</table>
-			
-			<table>
-			 <head>Client Error(4xx)</head>
-			  <tr>
-				<th>400</th>
-				<td>Bad Request</td>
-				<th>401</th>
-				<td>Unauthorized</td>
-				<th>402</th>
-				<td>Payment Required</td>
-			  </tr>
-			  <tr>
-				<th>403</th>
-				<td>Forbidden</td>
-				<th>404</th>
-				<td>Not Found</td>
-				<th>405</th>
-				<td>Method not Allowed</td>
-			  </tr>
-			  <tr>
-				<th>406</th>
-				<td>Not Acceptable</td>
-				<th>407</th>
-				<td>Proxy Authentication</td>
-				<th>408</th>
-				<td>Request Timeout</td>
-			  </tr>
-			  <tr>
-				<th>409</th>
-				<td>Conflict</td>
-				<th>410</th>
-				<td>Gone</td>
-				<th>411</th>
-				<td>Length Required</td>
-			  </tr>
-			  <tr>
-				<th>412</th>
-				<td>Precondition Failed</td>
-			  </tr>
-			</table>
-			
-			<table>
-			  <tr>
-			  <head>Server Error(5xx)</head>
-				<th>500</th>
-				<td>Internal Server Error</td>
-				<th>501</th>
-				<td>Not Implemented</td>
-				<th>502</th>
-				<td>Bad Gateway</td>
-			  </tr>
-			  <tr>
-				<th>503</th>
-				<td>Service Unavailable</td>
-				<th>504</th>
-				<td>Gateway timeout</td>
-				<th>505</th>
-				<td>HTTP Version not Supported</td>
-			  </tr>
-			</table>
-			
-        </div>
-    </div>
     
 	
 	

@@ -2,25 +2,33 @@ body{
     margin:0;
     padding: 0;
 	height: 100%;
+    background-color: #ccc;
 }
 
 header {
     background-color: #52658F;
-    height: 400px;
+    height: 120px;
+    padding-left: 30px;
 }
 
 .main_cont{
 	width: 85%;
     float: right;
     margin: 0;
-    background-color: #ccc;
+    background-color: #f7f5e6;
     
 }
 
 /*NAV*/
 
-.main ul {
+nav {
     position: sticky;
+    top: 0;
+    float: inherit;
+    z-index: 100;
+}
+
+.horizontal ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -29,12 +37,12 @@ header {
     font-family: Grotesk Thin;
 }
 
-.main ul li {
+.horizontal ul li {
     float: left;
     list-style-type: none;
 }
 
-.main li a {
+.horizontal li a {
     font-size: 15px;
     font-size: calc(12px + 0.7vw);
     display: block;
@@ -43,45 +51,48 @@ header {
     text-decoration: none;
 }
 
-.main li a:hover {
+.horizontal li a:visited{
+    
+}
+
+.horizontal li a:hover {
     background-color: #111;
 }
 
-.vertical-menu ul {
-	position:sticky;
+.vertical ul {
+    font-family: Grotesk;
     list-style-type: none;
+    float: left;
     margin: 0;
     padding: 0;
     width: 15%;
-    background-color: #333A56;
-    position: fixed;
     height: 100%;
     overflow: auto;
 }
 
-.vertical-menu ul li {
-    float: left;
+.vertical ul li {
     list-style-type: none;
 }
 
-.vertical-menu li a {
+.vertical li a {
     font-size: 15px;
-    font-size: calc(12px + 0.7vw);
+    font-size: calc(12px + 0.5vw);
     display: block;
-    color: white;
-    padding: 14px 16px;
+    color: #333A56;
+    padding: 10px 12px;
     text-decoration: none;
 }
 
-.main li a:hover {
+.horizontal li a:hover {
     background-color: #111;
 }
 
-.vertical-menu ul:hover {
-    background-color: #ccc; /* Dark grey background on mouse-over */
+.vertical li a:hover {
+    background-color: #333A56;
+    color: white;
 }
 
-.vertical-menu ul.active {
+.vertical ul.active {
     background-color: #4CAF50; /* Add a green color to the "active/current" link */
     color: white;
 }
@@ -91,19 +102,15 @@ header {
 h1{
     display: block;
     font-family: Grotesk;
-    font-size: 45px;
     font-weight: 100;
     color: white;
     position: relative;
     float: left;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
 }
 
 .h11{
     font-family: Grotesk thin;
+    font-size: 25px;
 }
 
 h2{
