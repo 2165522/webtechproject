@@ -74,13 +74,14 @@
                     <dd>-HTTP 2 (RFC 7540 May 2015)</dd><br>
 
                 <dt><h3>HTTP Fundamentals</h3></dt>
-
-                <dt><strong><abbr title="A.K.A as User Agents">Clients</abbr></strong></dt>	
-                    <dd>web browser, web crawlers/spiders, other end user tools & applications</dd>
+                <dt>HTTP typically runs on top of TCP/IP, using TCP port 80 by default, or TCP port 443 for HTTPS (HTTP over SSL/TLS)</dt>
+                <dd>Servers - Origin Servers, Proxy Servers, Gateways, and Tunnels.</dd>
                  <dt><strong>HTTP</strong></dt>	
                     <dd>-Uses a request response standard protocol</dd>
                     <dd>-The client sends an HTTP request message to the server</dd>
                     <dd>-The server processes the request & replies with an HTTP response message</dd>
+                <dt><strong>Clients</strong></dt> 
+                    <dd>web browser, web crawlers/spiders, other end user tools & applications</dd>
                 <dt><strong>Servers</strong></dt>
                     <dd>-HTTP is based on a client server architecture</dd>
                     <dd>-Origin Servers</dd>
@@ -90,19 +91,49 @@
                 <dt><strong>HTTP resources are identified using URLs, or more specially, HTTP URLs</strong></dt>
                     <dd>-Scheme (HTTP/HTTPs)</dd>
                     <dt><strong>Authority</strong></dt>
-                        <dd>Host</dd>
                         <dd>-User information authentication credentials(deprecated)</dd>
-                    <dt><strong>Port Number</strong></dt>
-                        <dd>Domain name(resolved to an IP Address using DNS) of the server where the resource resides will be created</dd>
+                        <dd>Host - domain name (resolved to an IP Address using DNS) of the server where the resource resides/will be created.</dd>
+                        <dd>Port Number</dd>
                 <dt><strong>Path to resource (resolved relative to the document root on the server)</strong></dt>
-                <dt><strong>May refer to a static/dynamic resource</strong></dt>
-                <dt><strong>Typically provided as ket = value pairs,with ampersand(&) separators between key value pairs may be URL - Encoded</strong></dt>
+                <dd>May refer to a static/dynamic resource</dd>
+                <dt><strong>Query in HTTP</strong></dt>
+                <dd>Typically provided as key = value pairs,with ampersand(&) separators between key value pairs; may be URL - Encoded</dd>
                 <dt><strong>Fragment identifier</strong></dt>
-                <dt><strong>HTTP Request Message</strong></dt>
-                    <dt><strong>Request Line (CRLF - terminated line consisting of three spaces separated values)</strong></dt>
+                <dt><h3>HTTP Request Message</h3></dt>
+                    <dt><strong>Request Line - </strong>(CRLF - terminated line consisting of three spaces separated values)</dt>
                         <dd>-Method</dd>
                         <dd>-Request</dd>
                         <dd>-Protocol Version</dd>
+                <dt><h3>HTTP Request Methods</h3></dt>
+                    <dt><strong>GET</strong></dt>
+                        <dd>it is used to transfer a selected presentation of the target resource. The retrieved resource is returned in  the message body of the response as entiy. Most commonly used HTTP method that is used to request from the server the retrieval of the source identified by the request URI; the retrieved resource is returned in the message body as an entity. Can be combined with conditional and/or range request headers to effect conditional and/or partial resource retrieval Must be supported by all general-purpose servers.</dd>
+                    <dt><strong>HEAD</strong>
+                        <dd>returns only the status line and message headers returned by a GET request, without the message body.</dd>
+                    <dt><strong>POST </strong> 
+                        <dd>typically used in submitting HTML Form Data.</dd>
+                    <dt><strong>PUT </strong> 
+                        <dd>create or replace the state of target request.</dd>
+                <dt><strong>DELETE</strong></dt> 
+                        <dd>used to delete/remove a resource indentified by the Uniform Resource Identifier(URI)</dd>
+                    <dt><strong>OPTIONS </strong>
+                        <dd> used to request information about the communication options available for the target resources</dd>
+                    <dt><strong>TRACE </strong>
+                        <dd>requests a remote, application-level loopback of the request message</dd>
+                        <dd>typically  used for testing/diagnostics of the request/response.</dd>
+                    <dt><strong>CONNECT </strong> 
+                        <dd>requests the establishment of a tunnel; reserved for the use of tunneling proxy servers.</dd>
+                <dt><h3>Method Properties</h3></dt>
+                    <dt><strong>Safe Methods</strong></dt>
+                        <dd>GET, HEAD, OPTIONS, TRACE</dd>
+                        <dd>client does not request and does not expect, any state change on the origin server as a result of applying the method to a target resource.</dd>
+                    <dt><strong>Idempotent Method</strong></dt>
+                        <dd>GET, HEAD, OPTIONS, TRACE, PUT, DELETE</dd>
+                        <dd>intended effect on the server of multiple identical requests with the method is the sameas the effect of a single request.</dd>
+                    <dt><strong>Cacheable Methods</strong></dt>
+                    <dd>GET, HEAD, POST</dd>
+                    <dd>no message because it is laready cached</dd>
+                    <dd>indicates that the response to a method is allowed to be stored for future use.</dd>
+                <dt><h3>HTTP Status Codes</h3></dt>
             </dl>
         </div>
     </div>
