@@ -128,4 +128,19 @@ h2{
     font-family: Grotesk Thin;
     src: url("fonts/TYPO GROTESK THIN DEMO.OTF");
 }
+/*TABLE*/
+table, td, th {
+    border: 1px solid black;
+}
+
+table{
+    border: 1px solid black;
+    table-layout: fixed;
+    width: 200px;
+}
+
+th, td {
+    border: 1px solid black;
+    width: 100px;
+}
 
