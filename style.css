@@ -1,5 +1,6 @@
 body{
     margin:0;
+    padding: 0;
 	height: 100%;
 }
 
@@ -9,30 +10,14 @@ header {
 }
 
 .main_cont{
-    float: right;
 	width: 85%;
+    float: right;
     margin: 0;
-}
-
-.cont1{
-    margin: 0;
-    background-color: #F7F5e6;
-}
-
-.cont2{
-    margin: 0;
-    background-color: #E0FFFF;
-}
-
-.cont3{
-    margin: 0;
-    background-color: #E6E6FA;
+    background-color: #ccc;
+    
 }
 
 /*NAV*/
-nav{
-    margin: 0;
-}
 
 .main ul {
     position: sticky;
@@ -41,15 +26,15 @@ nav{
     padding: 0;
     overflow: hidden;
     background-color: #333A56;
-    font-family: Typo Grotesk Thin Demo;
+    font-family: Grotesk Thin;
 }
 
-li {
+.main ul li {
     float: left;
     list-style-type: none;
 }
 
-li a {
+.main li a {
     font-size: 15px;
     font-size: calc(12px + 0.7vw);
     display: block;
@@ -58,19 +43,37 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
+.main li a:hover {
     background-color: #111;
 }
 
-
 .vertical-menu ul {
-	width: 15%; /* Set a width if you like */
-	height: 100%;
-	position: sticky;
-	float: left;
-    background-color: #333A56; /* Grey background color */
-    color: #E8E8E8; /* Add some padding */
-    text-decoration: none; /* Remove underline from links */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    background-color: #333A56;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.vertical-menu ul li {
+    float: left;
+    list-style-type: none;
+}
+
+.vertical-menu li a {
+    font-size: 15px;
+    font-size: calc(12px + 0.7vw);
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.main li a:hover {
+    background-color: #111;
 }
 
 .vertical-menu ul:hover {
